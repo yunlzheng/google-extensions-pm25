@@ -1,8 +1,16 @@
 $(function(){
 
-    $.get("http://www.pm25.in/api/querys/pm2_5.json?city=chengdu&token=FydAKx5y1BBbqXeLcxyi", function(result, statusText, jqXHR){
- 
-        for(var i=0; i<result.length; i++){
+    $.get("http://pm25.in/api/querys/pm2_5.json?city=chengdu&token=FydAKx5y1BBbqXeLcxyi", function(result, statusText, jqXHR){
+        
+        console.log(result);
+
+        var summary = result[result.length-1];
+
+        console.log(summary);
+
+        $("#area").append(template($("#tpl_summary").html(), summary));
+
+        for(var i=0; i<result.length-1; i++){
 
             var tpl = template($("#tpl_pm25_item").html(), result[i]);
             $("#positions").append(tpl);

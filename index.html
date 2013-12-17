@@ -9,20 +9,28 @@
   </head>
   <body>
     <div id="area">
-      <h2>成都</h2>
+      
     </div>
     <div id="positions"></div>
     <script src="app/scripts/app.js"></script>
-    <script type="text/template" id="tpl_pm25_item">
-    <div class="position">
-      <div>AQI空气质量指数 {aqi}</div>
-      <div>pm2_5: {pm2_5}</div>
-      <div>pm2_5_24h: {pm2_5_24h}</div>
-      <div>position_name: {position_name}</div>
-      <div>quality:{quality}</div>
-      <div>time_point:{time_point}</div>
-    </div>
+    <script type="text/template" id="tpl_summary">
+      <h2>{area}</h2>
+      <div>AQI空气质量指数 {pm2_5}</div>
+      <div>pm2_5_24h {pm2_5_24h}</div>
+      <div>{quality}</div>
+      <div>{time_point}</div>
     </script>
+    <script type="text/template" id="tpl_pm25_item">
+      <div class="position">
+        <h2>{position_name}</h2>
+        <h3>AQI空气质量指数 {aqi}</h3>
+        <div>pm2_5: {pm2_5}</div>
+        <div>pm2_5_24h: {pm2_5_24h}</div>
+        <div>quality:{quality}</div>
+        <div>time_point:{time_point}</div>
+      </div>
+    </script>
+
   </body>
 </html>
 

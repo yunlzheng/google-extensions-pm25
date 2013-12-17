@@ -7,7 +7,8 @@
 
   "permissions": [
     "https://secure.flickr.com/",
-    "http://www.pm25.in/"
+    "http://www.pm25.in/",
+    "http://pm25.in/"
   ],
   "browser_action": {
     "default_icon": "icon.jpg",
