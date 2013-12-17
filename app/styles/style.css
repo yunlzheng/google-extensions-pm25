@@ -1,0 +1,25 @@
+ body {
+  min-width: 357px;
+  overflow-x: hidden;
+  background-color: #EAEAEA;
+}
+
+img {
+  margin: 5px;
+  border: 2px solid black;
+  vertical-align: middle;
+  width: 75px;
+  height: 75px;
+}
+
+#positions{
+
+}
+
+.position{
+
+  padding: 10px;
+  background-color: #fff;
+  margin: 5px;
+
+}
