@@ -1,6 +1,10 @@
 $(function(){
 
-    $.get("http://pm25.in/api/querys/pm2_5.json?city=chengdu&token=FydAKx5y1BBbqXeLcxyi", function(result, statusText, jqXHR){
+    if(!localStorage['current_city']){
+        localStorage['current_city'] = '成都';
+    }
+
+    $.get("http://pm25.in/api/querys/pm2_5.json?city="+localStorage['current_city']+"&token=FydAKx5y1BBbqXeLcxyi", function(result, statusText, jqXHR){
         
         console.log(result);
 
