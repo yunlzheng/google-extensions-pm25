@@ -9,9 +9,21 @@
   </head>
   <body>
     <div id="appPm25">
-    <div id="area">
-    </div>
-    <div id="positions"></div>
+      <div id="area">
+      </div>
+      <div id="positions">
+        <h2>监测点</h2>
+        <div class="position">
+          <div class="cos cos1">监测点</div>
+          <div class="cos cos2">aqi指数</div>
+          <div class="cos cos3">pm2.5</div>
+          <div class="cos cos4">pm2.5/24h</div>
+        </div>
+      </div>
+      <div class="fotter">
+        <span>@copyright yunlzheng</span>
+        <span>（由PM25.in提供数据）</span>
+      </div>
     </div>
     <script src="app/scripts/app.js"></script>
     <script type="text/template" id="tpl_summary">
@@ -26,16 +38,14 @@
         <span>{time_point}：{pm2_5}</span> 
         <span>24H：{pm2_5_24h}</span>
       </div>
-      <div></div>
+      
     </script>
     <script type="text/template" id="tpl_pm25_item">
       <div class="position">
-        <h3>{position_name}</h3>
-        <h4>AQI空气质量指数 {aqi}</h4>
-        <div>pm2_5: {pm2_5}</div>
-        <div>pm2_5_24h: {pm2_5_24h}</div>
-        <div>quality:{quality}</div>
-        <div>time_point:{time_point}</div>
+        <div class="cos cos1">{position_name}</div>
+        <div class="cos cos2">{aqi}</div>
+        <div class="cos cos3">{pm2_5}</div>
+        <div class="cos cos4">{pm2_5_24h}</div>
       </div>
     </script>
 
