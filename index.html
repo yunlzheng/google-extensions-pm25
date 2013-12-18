@@ -8,22 +8,30 @@
     <script src="app/vendor/jquery-1.10.2.min.js"></script>
   </head>
   <body>
+    <div id="appPm25">
     <div id="area">
-      
     </div>
     <div id="positions"></div>
+    </div>
     <script src="app/scripts/app.js"></script>
     <script type="text/template" id="tpl_summary">
       <h2>{area}</h2>
-      <div>AQI空气质量指数 {pm2_5}</div>
-      <div>pm2_5_24h {pm2_5_24h}</div>
-      <div>{quality}</div>
-      <div>{time_point}</div>
+      <div class="aqi">
+        <span class="desc">AQI空气质量指数</span> 
+        <span class="aqi_num">{aqi}</span>
+      </div>
+      <div class="quality">{quality}</div>
+      <div class="pm25">
+        <h2>PM2.5</h2>
+        <span>{time_point}：{pm2_5}</span> 
+        <span>24H：{pm2_5_24h}</span>
+      </div>
+      <div></div>
     </script>
     <script type="text/template" id="tpl_pm25_item">
       <div class="position">
-        <h2>{position_name}</h2>
-        <h3>AQI空气质量指数 {aqi}</h3>
+        <h3>{position_name}</h3>
+        <h4>AQI空气质量指数 {aqi}</h4>
         <div>pm2_5: {pm2_5}</div>
         <div>pm2_5_24h: {pm2_5_24h}</div>
         <div>quality:{quality}</div>

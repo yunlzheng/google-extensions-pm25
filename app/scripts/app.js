@@ -5,14 +5,15 @@ $(function(){
         console.log(result);
 
         var summary = result[result.length-1];
-
-        console.log(summary);
+        summary.time_point = summary.time_point.substr(11,5)
 
         $("#area").append(template($("#tpl_summary").html(), summary));
 
         for(var i=0; i<result.length-1; i++){
 
-            var tpl = template($("#tpl_pm25_item").html(), result[i]);
+            var item = result[i];
+            item.time_point = item.time_point.substr(11,5)
+            var tpl = template($("#tpl_pm25_item").html(), item);
             $("#positions").append(tpl);
 
         }
@@ -23,7 +24,8 @@ $(function(){
     function template(tpl, object){
 
         for(var key in object){
-            tpl = tpl.replace('{'+key+'}', object[key]);
+            var obj = object[key];
+            tpl = tpl.replace('{'+key+'}', obj);
         }
         return tpl;
 

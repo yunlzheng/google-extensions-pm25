@@ -1,32 +1,74 @@
  body {
-  min-width: 357px;
+  min-width: 280px;
   overflow-x: hidden;
-  background-color: #EAEAEA;
-  font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB",sans-serif;
+  background-color: #424643;
+  font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu,"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB",sans-serif;
+  margin: 20px 40px;
+  background-image: url("../images/bg.png");
+  background-repeat: repeat;
 }
 
-img {
-  margin: 5px;
-  border: 2px solid black;
-  vertical-align: middle;
-  width: 75px;
-  height: 75px;
+
+#appPm25{
+  
 }
 
-#positions{
-
-}
-
-.position{
-
+#area{
+  margin-bottom:10px;
   padding: 10px;
   background-color: #FFF;
-  margin: 10px;
-   -webkit-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -moz-box-shadow: 0px 1px 2px #a5a4a6;
   -webkit-box-shadow: 0px 1px 2px #A5A4A6;
   box-shadow: 0px 1px 2px #A5A4A6;
+}
+
+#area h2{
+  font-size: 16px;
+}
+
+.aqi{
+  text-align: center;
+}
+
+.aqi .desc{
+  font-size: 12px;
+}
+
+.aqi .aqi_num{
+
+  font-size: 80px;
+  display: block;
+
+}
+
+.quality{
+  text-align: center;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 20px;
+}
+
+.pm25 span{
+  display: block;
+}
+
+#positions{
+  background-color: #FFF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 1px 2px #a5a4a6;
+  -webkit-box-shadow: 0px 1px 2px #A5A4A6;
+  box-shadow: 0px 1px 2px #A5A4A6;
+}
+
+
+
+.position{
+
+  padding: 10px;
+  border-bottom: 1px dashed #ddd;
 
 }
